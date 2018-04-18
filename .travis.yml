@@ -8,6 +8,7 @@ addons:
     - llvm-toolchain-precise-3.8
     packages:
     - g++-6
+    - unzip
 install:
   - "[ $CXX = g++ ] && export CXX=g++-6 || true"
 script:
@@ -16,5 +17,5 @@ script:
   - ./testAdd
 before_install:
   - openssl enc -aes-256-cbc -d -in assignment2-nehatambe.zip.enc -out assignment2-nehatambe.zip -base64 -K $encrypted_d1234_key -iv $encrypted_d1234_iv
-  - tar xvf assignment2-nehatambe.zip
+  - unzip assignment2-nehatambe.zip
 
