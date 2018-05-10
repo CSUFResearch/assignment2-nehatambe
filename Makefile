@@ -1,7 +1,6 @@
 
 CXXFLAGS = -g -Wall -Wfatal-errors -std=c++14
 
-echo $encrypted_d1234_key
 
 ALL = addNumbers
 
